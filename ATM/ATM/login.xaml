@@ -1,0 +1,34 @@
+﻿<Window x:Class="ATM.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATM"
+        mc:Ignorable="d"
+        Title="login" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="307"/>
+
+            <ColumnDefinition Width="211"/>
+            <ColumnDefinition Width="274"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="163*"/>
+            <RowDefinition Height="50*"/>
+
+            <RowDefinition Height="24"/>
+
+            <RowDefinition Height="184*"/>
+
+        </Grid.RowDefinitions>
+        <PasswordBox x:Name="txtPin" Grid.Column="1" Margin="7,22,18,10" VerticalAlignment="Center" Height="18" Grid.Row="1" MaxLength="4"/>
+        <Label Content="Enter PIN" HorizontalAlignment="Right" Margin="0,116,78,18" Target="{Binding ElementName=txtPassword}" Width="60" Grid.Column="1"/>
+        <WrapPanel Grid.Column="1" Grid.Row="2" Margin="0,0,10,0">
+            <Button x:Name="btnOk" Content="_OK" Width="70" Margin="5,2"  IsDefault="True" Click="btnOk_Click" />
+            <Button x:Name="btnCancel" Content="_Cancel" Width="70" Margin="45,2,0,2"  IsCancel="True" Click="btnCancel_Click"/>
+        </WrapPanel>
+        <Label Content="CDI BANK ATM" HorizontalAlignment="Right" Margin="0,10,193,124" Target="{Binding ElementName=txtPassword}" Width="104" RenderTransformOrigin="-0.405,1.214"/>
+    </Grid>
+</Window>
